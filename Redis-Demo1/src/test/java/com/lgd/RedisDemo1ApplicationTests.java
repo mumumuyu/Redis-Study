@@ -23,6 +23,11 @@ class RedisDemo1ApplicationTests {
     RedisTemplate redisTemplate;
 
     @Test
+    void clusterTest(){
+        redisTemplate.opsForValue().set("test","test");
+    }
+
+    @Test
     void contextLoads() {
 
         Set<String> keys = redisTemplate.keys("*");
